@@ -1,0 +1,6 @@
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: gunicorn kollect.wsgi --log-file -
+  release: poetry run kollect migrate
